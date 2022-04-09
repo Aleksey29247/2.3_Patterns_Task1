@@ -1,11 +1,16 @@
 package ru.netology;
 
 import com.github.javafaker.Faker;
+
+import lombok.Data;
 import lombok.Value;
+
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
+
+@Data
 
 
 public class DataGenerator {
@@ -14,10 +19,10 @@ public class DataGenerator {
 
     private static Faker faker = new Faker(new Locale("ru"));
 
-    public static String generateDate(int shift) {
-        int random = 3 + (int) (Math.random() * 30);
-        String date = LocalDate.now().plusDays(random).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-        return date;
+
+    public String generateDate(int days) {
+       return LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+
         // TODO: добавить логику для объявления переменной date и задания её значения, для генерации строки с датой
         // Вы можете использовать класс LocalDate и его методы для получения и форматирования даты
 
@@ -42,7 +47,7 @@ public class DataGenerator {
     }
 
     public static String generatePhone(String locale) {
-        String name = faker.name().fullName();
+        String phone = faker.name().fullName();
         return phone;
         // TODO: добавить логику для объявления переменной phone и задания её значения, для генерации можно
         // использовать Faker
