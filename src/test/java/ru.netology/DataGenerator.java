@@ -20,7 +20,7 @@ public class DataGenerator {
     private static Faker faker = new Faker(new Locale("ru"));
 
 
-    public String generateDate(int days) {
+    public static String generateDate(int days) {
        return LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
 
         // TODO: добавить логику для объявления переменной date и задания её значения, для генерации строки с датой
@@ -29,7 +29,7 @@ public class DataGenerator {
     }
 
     public static String generateCity(String locale) {
-        String[] citis = {"Москва", "Калуга", "Абакан", "Владикавказ", "Воронеж", "Пермь", "Екатеринбург", "Ульяновск"};
+        String[] citis = {"Новосибирск", "Омск", "Томск", "Барнаул"};
         int n = (int) Math.floor(Math.random() * citis.length);
         String city = citis[n];
         return city;
