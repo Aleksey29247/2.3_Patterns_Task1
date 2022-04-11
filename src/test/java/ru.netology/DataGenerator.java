@@ -12,7 +12,6 @@ import java.util.Locale;
 
 @Data
 
-
 public class DataGenerator {
        private DataGenerator() {
     }
