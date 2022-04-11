@@ -1,16 +1,11 @@
 package ru.netology;
 
-import com.codeborne.selenide.Condition;
+
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.Keys;
 
-import java.time.Duration;
-
-import static com.codeborne.selenide.Condition.exactText;
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 class DeliveryTest {
