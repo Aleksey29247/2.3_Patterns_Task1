@@ -30,24 +30,21 @@ public class DataGenerator {
     public static String generateCity(String locale) {
         String[] citis = {"Новосибирск", "Омск", "Томск", "Барнаул"};
         int n = (int) Math.floor(Math.random() * citis.length);
-        String city = citis[n];
-        return city;
+        return citis[n];
         // TODO: добавить логику для объявления переменной city и задания её значения, генерацию можно выполнить
         // с помощью Faker, либо используя массив валидных городов и класс Random
 
     }
 
     public static String generateName(String locale) {
-        String name = faker.name().fullName();
-        return name;
+        return faker.name().fullName();
         // TODO: добавить логику для объявления переменной name и задания её значения, для генерации можно
         // использовать Faker
 
     }
 
     public static String generatePhone(String locale) {
-        String phone = faker.name().fullName();
-        return phone;
+        return faker.phoneNumber().phoneNumber();
         // TODO: добавить логику для объявления переменной phone и задания её значения, для генерации можно
         // использовать Faker
 
