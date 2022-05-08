@@ -27,7 +27,7 @@ public class DataGenerator {
 
     }
 
-    public static String generateCity(String locale) {
+    public static String generateCity() {
         String[] citis = {"Новосибирск", "Омск", "Томск", "Барнаул"};
         int n = (int) Math.floor(Math.random() * citis.length);
         return citis[n];
@@ -36,14 +36,14 @@ public class DataGenerator {
 
     }
 
-    public static String generateName(String locale) {
+    public static String generateName() {
         return faker.name().fullName();
         // TODO: добавить логику для объявления переменной name и задания её значения, для генерации можно
         // использовать Faker
 
     }
 
-    public static String generatePhone(String locale) {
+    public static String generatePhone() {
         return faker.phoneNumber().phoneNumber();
         // TODO: добавить логику для объявления переменной phone и задания её значения, для генерации можно
         // использовать Faker
@@ -54,8 +54,8 @@ public class DataGenerator {
         private Registration() {
         }
 
-        public static UserInfo generateUser(String locale) {
-            UserInfo user = new UserInfo(generateCity(locale), generateName(locale), generatePhone(locale));
+        public static UserInfo generateUser() {
+            UserInfo user = new UserInfo(generateCity(), generateName(), generatePhone());
             return user;
             // TODO: добавить логику для создания пользователя user с использованием методов generateCity(locale),
             // generateName(locale), generatePhone(locale)

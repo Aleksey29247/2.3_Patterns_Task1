@@ -28,7 +28,7 @@ class DeliveryTest {
     void shouldSuccessfulPlanAndReplanMeeting() {
         Configuration.holdBrowserOpen = true;
         Configuration.browserSize = "800x800";
-        var validUser = DataGenerator.Registration.generateUser("ru");
+        var validUser = DataGenerator.Registration.generateUser();
         var daysToAddForFirstMeeting = 4;
         var firstMeetingDate = DataGenerator.generateDate(daysToAddForFirstMeeting);
         var daysToAddForSecondMeeting = 7;
